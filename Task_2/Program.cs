@@ -14,11 +14,11 @@ namespace Task_2
                 while (true)
                 {
                     Console.Write("Введите значение: ");
-                    string value = Console.ReadLine().Trim().ToLower();
-                    if (!values.ContainsKey(value))
-                        values.Add(value, pos++);
+                    string inputStr = Console.ReadLine().Trim().ToLower();
+                    if (!values.ContainsKey(inputStr))
+                        values.Add(inputStr, pos++);
                     else
-                        throw new AlreadyExistsException(value, values[value]);
+                        throw new AlreadyExistsException(inputStr, values[inputStr]);
                 }
             }
             catch (AlreadyExistsException e)

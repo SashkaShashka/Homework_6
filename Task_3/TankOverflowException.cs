@@ -6,6 +6,11 @@ namespace Task_3
 {
     class TankOverflowException : Exception
     {
-        public TankOverflowException(string message) : base(message) { }
+        public string Information { get; private set; }
+        public TankOverflowException(string message, uint maxAddVolume) : base(message)
+        {
+            Information = ("Можно добавить только " + maxAddVolume + " литров");
+        }
     }
 }
+

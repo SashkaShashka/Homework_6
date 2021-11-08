@@ -18,7 +18,7 @@ namespace Task_3
                 Action?.Invoke(CurrentVolume, maxVolume);
             }
             else
-                throw new NotEnoughException("В цистерне не хватает места");
+                throw new TankOverflowException("В цистерне не хватает места",maxVolume-CurrentVolume);
         }
         public void Take(uint liters)
         {
@@ -30,7 +30,7 @@ namespace Task_3
                 Action?.Invoke(CurrentVolume, maxVolume);
             }
             else
-                throw new NotEnoughException("В цистерне недостаточно безнина");
+                throw new NotEnoughException("В цистерне недостаточно безнина", CurrentVolume);
         }
         public Tank(uint maxVolume)
         {

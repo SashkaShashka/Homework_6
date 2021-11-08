@@ -44,12 +44,14 @@ namespace Task_3
                 {
 
                     Console.WriteLine(e.Message);
+                    Console.WriteLine(e.Information);
                     WaitClick();
                 }
-                catch (NotEnoughException e)
+                catch (NotEnoughException e) 
                 {
 
                     Console.WriteLine(e.Message);
+                    Console.WriteLine(e.Information);
                     WaitClick();
                 }
                 catch (Exception e)
